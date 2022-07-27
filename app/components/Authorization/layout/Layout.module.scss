@@ -1,0 +1,21 @@
+.wrapper {
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgBlue {
+  background-color: #1BBEF2;
+}
+.bgBlack {
+  background-color: #18191D;
+}
+.bgWhite {
+  background-color: #fff;
+}

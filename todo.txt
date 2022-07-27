@@ -1,0 +1,45 @@
+1) Валидацию пароля
+2) Валидацию логина, что бы после того как пользователь зарегался под одним логином - его не пускако под тем самым при повторной регистрации
+3) у меня здесь сломается логика с этими номерами страниц что мы сделали с useState, потому что теперь взависимости авторизован пользователь или нет его пропустит дальше
+5) Если забыл пароль то попрошу пользователя написать на конкретный мейл
+7) Скрытие пароля, что бы когда пользователя водил пароль - его не было видно
+8) Фокус на имени при регистрации
+9) Frame-animation
+
+return (
+		<Layout bgColor="black" title="Registration" className={styles.wrapper}>
+			<div className={styles.head}>
+				<span className={styles.back}>
+					<a className={styles.a}>
+						<span className={styles.span}>{'<'}</span>Назад
+					</a>
+				</span>
+				<h1 className={styles.h1}>Зарегестрироваться</h1>
+				<span></span>
+			</div>
+			<Input className={styles.name} placeholder="Как к вам обращаться" />
+			<Input placeholder="Эл. почта" />
+			<Input placeholder="Телефон" />
+			<Input placeholder="Пароль" />
+			<Input placeholder="Улица и дом" />
+			<div className={styles.addressHead}>
+				<Input placeholder="Кв/офис" className={styles.inputAddress} />
+				<Input placeholder="Подъезд" className={styles.inputAddress} />
+				<Input placeholder="Этаж" className={styles.inputAddress} />
+			</div>
+			<div className={styles.liftHead}>
+				<div className={styles.lift}>Есть лифт</div>
+				<div></div>
+				<div className={styles.container}>
+					<label className={styles.switch} htmlFor="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<div className={cn(styles.slider, styles.round)}></div>
+					</label>
+				</div>
+			</div>
+			<div className={styles.hr}></div>
+			<Button appearance="blue" className={styles.button}>
+				Зарегистрироваться
+			</Button>
+		</Layout>
+	)

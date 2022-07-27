@@ -1,0 +1,32 @@
+export const users = [
+	{
+		name: 'Ruslan',
+		mail: 'ruslan@gmail.com',
+		number: '380990314699',
+		password: '123',
+		street: 'Pechersk',
+		streetNumber: '15',
+		entrance: '4',
+		floor: '16',
+	},
+	{
+		name: 'Masha',
+		mail: 'masha@gmail.com',
+		number: '380970314699',
+		password: '1234',
+		street: 'Pechersk',
+		streetNumber: '15',
+		entrance: '4',
+		floor: '16',
+	},
+	{
+		name: 'Serhii',
+		mail: 'lebed@gmail.com',
+		number: '380670314699',
+		password: '12345',
+		street: 'GPZ',
+		streetNumber: '15',
+		entrance: '4',
+		floor: '9',
+	},
+]

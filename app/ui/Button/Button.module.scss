@@ -1,0 +1,43 @@
+.button {
+  display: inline-block;
+  width: 343px;
+  height: 64px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-left: 16px;
+  margin-right: 16px;
+
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+
+  text-align: center;
+  font-size: 17px;
+  line-height: 22px;
+
+  transition: all 0.9s;
+}
+
+.white {
+  background-color: #ffffff;
+  color: #2F778E;
+}
+.white:hover {
+  background-color: #888888;
+}
+
+.blue {
+  background-color: #0EB7ED;
+  color: #ffffff;
+}
+.blue:hover {
+  background-color: #2F778E;
+}
+
+.green {
+  background-color: #219653;
+  color: #ffffff;
+}
+.green:hover {
+  background-color: #219111;
+}

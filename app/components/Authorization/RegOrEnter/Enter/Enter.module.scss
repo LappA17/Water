@@ -1,0 +1,57 @@
+.head {
+  margin-top: 54px;
+  display: flex;
+  align-items: center;
+  width: 375px;
+}
+.back {
+  margin-right: 30px;
+  margin-left: 15px;
+}
+.a {
+  color: #0EB7ED;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+}
+.a:hover {
+  background-color: #2F778E;
+}
+.span {
+  margin-right: 2px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 22px;
+}
+.h1 {
+  margin-left: 50px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.loginInput {
+  margin-top: 105px;
+}
+
+.passwordInput {
+  margin-top: 12px;
+}
+
+.button {
+  margin-top: 30px;
+  color: #2F778E;
+}
+
+.forgotPassword {
+  text-align: center;
+  margin-top: 45px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 22px;
+  font-size: 17px;
+  cursor: pointer;
+}
