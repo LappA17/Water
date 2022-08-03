@@ -14,13 +14,9 @@ export const AuthActionCreators = {
 	setIsAuth: (auth: boolean): SetAuthAction => ({ type: AuthActionEnum.SET_AUTH, payload: auth }),
 	setIsLoading: (payload: boolean): SetIsLoadingAction => ({
 		type: AuthActionEnum.SET_IS_LOADING,
-		payload,
+		payload: payload,
 	}),
-	setError: (payload: string): SetErrorAction => ({
-		type: AuthActionEnum.SET_ERROR,
-		payload,
-	}),
-
+	setError: (payload: string): SetErrorAction => ({ type: AuthActionEnum.SET_ERROR, payload }),
 	login: (username: string, password: string) => async (dispatch: AppDispatch) => {
 		try {
 			dispatch(AuthActionCreators.setIsLoading(true))
@@ -43,12 +39,12 @@ export const AuthActionCreators = {
 			dispatch(AuthActionCreators.setError('Произошла ошибка при логине'))
 		}
 	},
-
 	logout: () => async (dispatch: AppDispatch) => {
 		localStorage.removeItem('auth')
 		localStorage.removeItem('username')
 
+		//Обнулим состояние
 		dispatch(AuthActionCreators.setUser({} as IUser))
-		dispatch(AuthActionCreators.setIsAuth(false))
+		dispatch(AuthActionCreators.setIsAuth(false)) //чтобы нас редиректнуло на страницу с логином
 	},
 }

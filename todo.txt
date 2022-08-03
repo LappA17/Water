@@ -7,7 +7,7 @@
 9) Frame-animation
 
 return (
-		<Layout bgColor="black" title="Registration" className={styles.wrapper}>
+		<Layout bgColor="black" title="Index" className={styles.wrapper}>
 			<div className={styles.head}>
 				<span className={styles.back}>
 					<a className={styles.a}>

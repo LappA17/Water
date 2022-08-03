@@ -1,19 +1,14 @@
-import Layout from '../../layout/Layout'
-import Button from '../../../../ui/Button/Button'
-import Input from '../../../../ui/Input/Input'
+import Layout from '../../app/components/Authorization/layout/Layout'
+import Button from '../../app/ui/Button/Button'
+import Input from '../../app/ui/Input/Input'
 import styles from './Enter.module.scss'
 import { useState } from 'react'
-import { useActions } from '../../../../hooks/useActions'
-import { useTypedSelector } from '../../../../hooks/useTypedSelector'
-import Loader from '../../../../ui/Loader/Loader'
+import { useActions } from '../../app/hooks/useActions'
+import { useTypedSelector } from '../../app/hooks/useTypedSelector'
+import Loader from '../../app/ui/Loader/Loader'
+import Link from 'next/link'
 
-interface IEnter {
-	goBack: () => void
-	forgotPassword: () => void
-	goToPrivateAccount: () => void
-}
-
-const Enter = ({ goBack, forgotPassword, goToPrivateAccount }: IEnter): JSX.Element => {
+const Index = (): JSX.Element => {
 	const { login } = useActions()
 	const { error, isLoading, isAuth } = useTypedSelector(state => state.auth)
 	const [username, setUsername] = useState<string>('')
@@ -34,9 +29,11 @@ const Enter = ({ goBack, forgotPassword, goToPrivateAccount }: IEnter): JSX.Elem
 			<Layout bgColor="black" title="Логин">
 				<div className={styles.head}>
 					<span className={styles.back}>
-						<a className={styles.a} onClick={goBack}>
-							<span className={styles.span}>{'<'}</span>Назад
-						</a>
+						<Link href="/regOrEnter">
+							<a className={styles.a}>
+								<span className={styles.span}>{'<'}</span>Назад
+							</a>
+						</Link>
 					</span>
 					<h1 className={styles.h1}>Войти</h1>
 					<span></span>
@@ -53,20 +50,15 @@ const Enter = ({ goBack, forgotPassword, goToPrivateAccount }: IEnter): JSX.Elem
 					className={styles.passwordInput}
 					onChange={e => setPassword(e.target.value)}
 				/>
-				<Button
-					appearance="white"
-					className={styles.button}
-					type="submit"
-					onClick={isAuth ? goToPrivateAccount : errorMessage}
-				>
+				<Button appearance="white" className={styles.button} type="submit">
 					Войти
 				</Button>
-				<a className={styles.forgotPassword} onClick={forgotPassword}>
-					Забыли пароль?
-				</a>
+				<Link href="/enter/forgotPassword">
+					<a className={styles.forgotPassword}>Забыли пароль?</a>
+				</Link>
 			</Layout>
 		</form>
 	)
 }
 
-export default Enter
+export default Index

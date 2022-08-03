@@ -22,6 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 			streetNumber: user.streetNumber,
 			entrance: user.entrance,
 			floor: user.floor,
+			lift: user.lift,
 		}
 		users.push(newUser)
 		res.status(201).json(newUser)

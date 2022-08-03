@@ -1,18 +1,21 @@
-import Layout from '../../../layout/Layout'
+import Layout from '../../../app/components/Authorization/layout/Layout'
 import styles from '../Enter.module.scss'
+import Link from 'next/link'
 
 interface IForgotPassword {
 	goBack: () => void
 }
-const ForgotPassword = ({ goBack }: IForgotPassword): JSX.Element => {
+const Index = ({ goBack }: IForgotPassword): JSX.Element => {
 	return (
 		<Layout bgColor="black" title="Забыли пароль">
 			<div className={styles.head}>
-				<span className={styles.back}>
-					<a className={styles.a} onClick={goBack}>
-						<span className={styles.span}>{'<'}</span>Назад
-					</a>
-				</span>
+				<Link href="/enter">
+					<span className={styles.back}>
+						<a className={styles.a} onClick={goBack}>
+							<span className={styles.span}>{'<'}</span>Назад
+						</a>
+					</span>
+				</Link>
 				<h1 className={styles.h1}></h1>
 				<span></span>
 			</div>
@@ -41,4 +44,4 @@ const ForgotPassword = ({ goBack }: IForgotPassword): JSX.Element => {
 	)
 }
 
-export default ForgotPassword
+export default Index

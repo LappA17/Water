@@ -5,6 +5,7 @@ import styles from '../Authorization.module.scss'
 import Button from '../../../ui/Button/Button'
 import SliderIcon from './Ellipse 2.1.svg'
 import ActiveSliderIcon from './Rectangle.svg'
+import Link from 'next/link'
 
 interface IThirdSlider {
 	nextComponent: () => void
@@ -15,9 +16,14 @@ const ThirdSlider: FC<IThirdSlider> = ({ nextComponent }) => {
 			<FavIcon className={styles.icon} />
 			<h1 className={styles.h1}>Доставим тогда, когда вам удобно</h1>
 			<p className={styles.p}>Выбирайте удобное время когда и куда вам привезти воду</p>
-			<Button appearance="white" className={styles.button} onClick={nextComponent}>
-				Войти или зарегистрироваться
-			</Button>
+			<Link href="/regOrEnter">
+				<a>
+					<Button appearance="white" className={styles.button} onClick={nextComponent}>
+						Войти или зарегистрироваться
+					</Button>
+				</a>
+			</Link>
+
 			<div className={styles.iconWrapper}>
 				<SliderIcon />
 				<SliderIcon />
